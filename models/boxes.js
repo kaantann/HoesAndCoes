@@ -1,5 +1,4 @@
-const boxes =
-        [
+const boxes = [
             { row: 0, column: 0, color: "#612b0F" },
             { row: 0, column: 1, color: "#884b1f" },
             { row: 0, column: 2, color: "#a66128" },
@@ -511,4 +510,4 @@ const boxes =
             { row: 29, column: 15, color: "#0fb1e2" },
         ];
 
-export default boxes;
+    export default boxes;
