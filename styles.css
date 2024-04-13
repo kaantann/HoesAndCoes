@@ -1,7 +1,9 @@
-
+body{
+    background-color: #222831;
+}
 
 #mainCanvas{
-    border: 5px solid black;
+    border: 5px solid #222831;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -19,10 +21,63 @@
     transform: translate(-50%,-75%);
     height: 606px;
     width: 1136px;
-/* 
-    width: 100%;
-    height: 100%; */
     margin: 0 auto;
     justify-content: center;
     align-items: center;
 }
+
+
+.turn-indicator {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .wheel {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    border: 80px solid #76ABAE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25),
+                inset 4px 4px 4px rgba(238, 238, 238, 0.25);
+  }
+  
+  .circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #222831;
+    border-radius: 50%;
+    box-shadow: 6px 6px 6px rgba(238, 238, 238, 0.25),
+                inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  
+  .player {
+    position: absolute;
+    text-align: center;
+    line-height: 30px;
+    font-family: "Inter";
+    font-size: 25px;
+    color: #EEEEEE
+  }
+  
+  .player-text {
+    transform-origin: center center;
+  }
+  
+  #player1 { transform: rotate(0deg) translateY(-140px); }
+  #player2 { transform: rotate(90deg) translateY(-140px); }
+  #player3 { transform: rotate(180deg) translateY(-140px); }
+  #player4 { transform: rotate(270deg) translateY(-140px); }
+  
+  #player1-text { transform: rotate(180deg); }
+  #player2-text { transform: rotate(180deg); }
+  #player3-text { transform: rotate(180deg); }
+  #player4-text { transform: rotate(180deg); }
+
+
+

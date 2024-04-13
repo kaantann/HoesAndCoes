@@ -1,5 +1,5 @@
 const boxes = [
-            { row: 0, column: 0, color: "#612b0F" },
+            { row: 0, column: 0, color: "#612b0f" },
             { row: 0, column: 1, color: "#884b1f" },
             { row: 0, column: 2, color: "#a66128" },
             { row: 0, column: 3, color: "#c9822a" },
