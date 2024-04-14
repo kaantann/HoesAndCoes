@@ -28,12 +28,24 @@ body{
 
 
 .turn-indicator {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-  }
+
+  margin-top: 200px;
+
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 32px solid red;
+  z-index: 1;
+
+  transform-origin: 16px -84px;
+  transition: transform 1s ease-in-out;
+  rotate: 60deg;
+}
   
+
   .wheel {
+
     width: 200px;
     height: 200px;
     position: relative;
@@ -44,7 +56,9 @@ body{
     align-items: center;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25),
                 inset 4px 4px 4px rgba(238, 238, 238, 0.25);
-  }
+    
+}
+
   
   .circle {
     position: absolute;
@@ -54,7 +68,7 @@ body{
     border-radius: 50%;
     box-shadow: 6px 6px 6px rgba(238, 238, 238, 0.25),
                 inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+}
   
   .player {
     position: absolute;
@@ -63,21 +77,19 @@ body{
     font-family: "Inter";
     font-size: 25px;
     color: #EEEEEE
-  }
+}
   
   .player-text {
     transform-origin: center center;
-  }
+}
   
-  #player1 { transform: rotate(0deg) translateY(-140px); }
-  #player2 { transform: rotate(90deg) translateY(-140px); }
-  #player3 { transform: rotate(180deg) translateY(-140px); }
-  #player4 { transform: rotate(270deg) translateY(-140px); }
+  #player1 { transform: rotate(180deg) translateY(-140px); }
+  #player2 { transform: rotate(240deg) translateY(-140px); }
+  #player3 { transform: rotate(120deg) translateY(-140px); }
   
   #player1-text { transform: rotate(180deg); }
   #player2-text { transform: rotate(180deg); }
   #player3-text { transform: rotate(180deg); }
-  #player4-text { transform: rotate(180deg); }
 
 
 
