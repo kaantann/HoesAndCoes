@@ -1,30 +1,72 @@
-body{
-    background-color: #222831;
+body {
+  background-color: #222831;
 }
 
-#mainCanvas{
-    border: 5px solid #222831;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-75%);
-    width: 1000px;
-    height: 600px;
+#mainCanvas {
+  border: 5px solid #222831;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 1000px;
+  height: 600px;
 }
 
-#boardCanvas{
-    border: 2px solid black;
-    background-color: black;
-    position: absolute; 
-    top: 50%;
-    left: 50%; 
-    transform: translate(-50%,-75%);
-    height: 606px;
-    width: 1136px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+#boardCanvas {
+  border: 2px solid black;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -35%);
+  height: 606px;
+  width: 1136px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.vertical-letters {
+  writing-mode: vertical; /* Vertical writing mode */
+  text-align: center; /* Center-align the letters horizontally */
+  height: 12vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Space between letters */
+  font-size: 30px; /* Font size of letters */
+  
+  position: absolute;
+  transform: translate(330%, -15%);
+
+  color: whitesmoke;
+}
+
+.vertical-letters span {
+  padding: 2px;
+}
+
+
+.horizontal-numbers {
+  writing-mode: horizontal-tb; /* Vertical writing mode */
+  text-align: center; /* Center-align the letters horizontally */
+  height: 12vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Space between letters */
+  font-size: 30px; /* Font size of letters */
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-43.8%, -16%);
+  color: whitesmoke;
+}
+
+.horizontal-numbers span {
+  padding: 2px;
+}
+
+
 
 
 .turn-indicator {
@@ -39,57 +81,74 @@ body{
   z-index: 1;
 
   transform-origin: 16px -84px;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.75s ease-in-out;
   rotate: 60deg;
 }
-  
 
-  .wheel {
 
-    width: 200px;
-    height: 200px;
-    position: relative;
-    border: 80px solid #76ABAE;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25),
-                inset 4px 4px 4px rgba(238, 238, 238, 0.25);
-    
+.wheel {
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 80px solid #76ABAE;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25),
+    inset 4px 4px 4px rgba(238, 238, 238, 0.25);
+
 }
 
-  
-  .circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: #222831;
-    border-radius: 50%;
-    box-shadow: 6px 6px 6px rgba(238, 238, 238, 0.25),
-                inset 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-  
-  .player {
-    position: absolute;
-    text-align: center;
-    line-height: 30px;
-    font-family: "Inter";
-    font-size: 25px;
-    color: #EEEEEE
-}
-  
-  .player-text {
-    transform-origin: center center;
-}
-  
-  #player1 { transform: rotate(180deg) translateY(-140px); }
-  #player2 { transform: rotate(240deg) translateY(-140px); }
-  #player3 { transform: rotate(120deg) translateY(-140px); }
-  
-  #player1-text { transform: rotate(180deg); }
-  #player2-text { transform: rotate(180deg); }
-  #player3-text { transform: rotate(180deg); }
 
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: #222831;
+  border-radius: 50%;
+  box-shadow: 6px 6px 6px rgba(238, 238, 238, 0.25),
+    inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
 
+.player {
+  position: absolute;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Inter";
+  font-size: 25px;
+  color: #EEEEEE
+}
 
+.player-text {
+  transform-origin: center center;
+}
+
+#player1 {
+  transform: rotate(180deg) translateY(-140px);
+}
+
+#player2 {
+  transform: rotate(240deg) translateY(-140px);
+}
+
+#player3 {
+  transform: rotate(120deg) translateY(-140px);
+}
+
+#player1-text {
+  transform: rotate(180deg);
+}
+
+#player2-text {
+  transform: rotate(180deg);
+}
+
+#player3-text {
+  transform: rotate(180deg);
+}
