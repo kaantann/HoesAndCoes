@@ -37,27 +37,25 @@ turn_indicator.addEventListener('click', function() {
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    var gridSize = { rows: 16, columns: 30 };
     var boxDimension = 32;
-
     let margin = 6;
 
     // Draw the boxes
-    boxes.forEach(function (box) {
+    for (let curColumn=0; curColumn<boxes.length; curColumn++){
+        for(let curRow=0; curRow<boxes[curColumn].length; curRow++){
 
-        var _x = box.row *  (boxDimension + margin);
-        var _y = box.column *  (boxDimension + margin);
-
-        _mapper.set(box.color, { x: _x + (boxDimension / 2), 
-                                 y: _y + (boxDimension / 2) });
-
-        boardCanvasCtx.fillStyle = box.color;
-        boardCanvasCtx.fillRect(_x, _y, boxDimension , boxDimension );
-    });
-
+            var _x = curColumn *  (boxDimension + margin);
+            var _y = curRow *  (boxDimension + margin);
+            
+            let box = boxes[curColumn][curRow];
+            _mapper.set(box.color, { x: _x + (boxDimension / 2), 
+                                     y: _y + (boxDimension / 2),
+                                     name:box.name });
     
-
-    
+            boardCanvasCtx.fillStyle = box.color;
+            boardCanvasCtx.fillRect(_x, _y, boxDimension , boxDimension );
+        }
+    }
 });
 
 boardCanvas.addEventListener("click", function (e) {

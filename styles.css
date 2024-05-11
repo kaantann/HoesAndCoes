@@ -57,24 +57,32 @@ body {
 
 
 .horizontal-numbers {
-  writing-mode: horizontal-tb; /* Vertical writing mode */
-  text-align: center; /* Center-align the letters horizontally */
+  writing-mode: horizontal-tb; /* Horizontal writing mode */
+  text-align:center; /* Center-align the letters horizontally */
   height: 12vh; /* Full viewport height */
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around; /* Space between letters */
-  font-size: 30px; /* Font size of letters */
-  
-  top: 50%;
-  left: 50%;
-  transform: translate(-43.8%, -16%);
+  font-size: 28px; /*Font size of letters*/
+
+  top: 16.7%;
+  left: 9.1%;
+  position:absolute;
+  display:flex;
+
+
   color: whitesmoke;
 }
 
-.horizontal-numbers span {
-  padding: 2px;
+
+.single-digit{
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
+.double-digit{
+  padding-left: 5.1px;
+  padding-right: 5.1px;
+}
 
 
 
