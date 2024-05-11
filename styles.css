@@ -12,16 +12,22 @@ body {
   height: 600px;
 }
 
+
+#boardCanvas-container{
+  position: relative; /* Relative positioning for the canvas container */
+}
+
+
 #boardCanvas {
   border: 2px solid black;
   background-color: black;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-70%, -35%);
+  top: 20%;
+  left: 8%;
+  /* transform: translate(-70%, -35%); */
   height: 606px;
   width: 1136px;
-  margin: 0 auto;
+  margin-left:24px;
   justify-content: center;
   align-items: center;
 }
@@ -29,15 +35,18 @@ body {
 
 .vertical-letters {
   writing-mode: vertical; /* Vertical writing mode */
-  text-align: center; /* Center-align the letters horizontally */
+  text-align:center; /* Center-align the letters horizontally */
   height: 12vh; /* Full viewport height */
-  display: flex;
   flex-direction: column;
   justify-content: space-around; /* Space between letters */
-  font-size: 30px; /* Font size of letters */
-  
-  position: absolute;
-  transform: translate(330%, -15%);
+  font-size: 30px; /*Font size of letters*/
+
+  top: 20%;
+  left: 7%;
+  position:absolute;
+  display:flex;
+
+  /* transform: translate(-43.6%,-235%); */
 
   color: whitesmoke;
 }
@@ -69,22 +78,6 @@ body {
 
 
 
-.turn-indicator {
-
-  margin-top: 200px;
-
-  width: 0;
-  height: 0;
-  border-left: 16px solid transparent;
-  border-right: 16px solid transparent;
-  border-top: 32px solid red;
-  z-index: 1;
-
-  transform-origin: 16px -84px;
-  transition: transform 0.75s ease-in-out;
-  rotate: 60deg;
-}
-
 
 .wheel {
 
@@ -105,6 +98,21 @@ body {
 
 }
 
+.turn-indicator {
+
+  margin-top: 200px;
+
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 32px solid red;
+  z-index: 1;
+
+  transform-origin: 16px -84px;
+  transition: transform 0.75s ease-in-out;
+  rotate: 60deg;
+}
 
 .circle {
   position: absolute;

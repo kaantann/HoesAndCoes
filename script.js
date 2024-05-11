@@ -9,6 +9,8 @@ const boardCanvasCtx = boardCanvas.getContext("2d",{ willReadFrequently: true })
 const canvas = document.getElementById("mainCanvas");
 const ctx = canvas.getContext("2d");
 
+
+
 const colorCardCanvas = document.getElementById("colorCardCanvas");
 const colorCardCtx = colorCardCanvas.getContext("2d");
 
@@ -17,6 +19,7 @@ canvas.width = 1000;
 
 boardCanvas.height = 606;
 boardCanvas.width = 1136;
+
 
 const turn_indicator = document.querySelector('.turn-indicator');
 let rotationAngle = 0;
@@ -52,14 +55,10 @@ document.addEventListener("DOMContentLoaded", function () {
         boardCanvasCtx.fillRect(_x, _y, boxDimension , boxDimension );
     });
 
-    // let imageData = boardCanvasCtx.getImageData(270, 485, 1, 1);
-    // console.log(imageData);
+    
 
     
 });
-
-
-
 
 boardCanvas.addEventListener("click", function (e) {
 
