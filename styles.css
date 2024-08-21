@@ -66,11 +66,15 @@ body {
 
   top: 18.2%;
   left: 9.1%;
-  position:fixed;
+  position:absolute;
   display:flex;
 
 
   color: whitesmoke;
+}
+
+.horizontal-numbers span {
+  padding-bottom: 6px;
 }
 
 

@@ -1,6 +1,9 @@
-const myServer = require('http').createServer(app);
-const ws = require('ws');
-const wsServer = new ws.Server({ server: myServer });
+// import http from "http";
+import WebSocket from "ws";
+
+// const myServer = http.createServer();
+// const wsServer = new WebSocket.Server({ server: myServer });
+const wsServer = new WebSocket.Server();
 
 const MAX_PLAYER_NUMBER = 4;
 let currentPlayerNumber = 0;
