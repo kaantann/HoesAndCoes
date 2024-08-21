@@ -4,7 +4,7 @@ body {
 
 #mainCanvas {
   border: 5px solid #222831;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -75%);
@@ -13,16 +13,16 @@ body {
 }
 
 
-#boardCanvas-container{
-  position: relative; /* Relative positioning for the canvas container */
+#colorBoardCanvas-container{
+  position: absolute; /* Relative positioning for the canvas container */
 }
 
 
-#boardCanvas {
+#colorBoardCanvas {
   border: 2px solid black;
   background-color: black;
   position: absolute;
-  top: 20%;
+  top: 22%;
   left: 8%;
   /* transform: translate(-70%, -35%); */
   height: 606px;
@@ -41,7 +41,7 @@ body {
   justify-content: space-around; /* Space between letters */
   font-size: 30px; /*Font size of letters*/
 
-  top: 20%;
+  top: 22%;
   left: 7%;
   position:absolute;
   display:flex;
@@ -64,9 +64,9 @@ body {
   justify-content: space-around; /* Space between letters */
   font-size: 28px; /*Font size of letters*/
 
-  top: 16.7%;
+  top: 18.2%;
   left: 9.1%;
-  position:absolute;
+  position:fixed;
   display:flex;
 
 
@@ -146,11 +146,11 @@ body {
 }
 
 #player1 {
-  transform: rotate(180deg) translateY(-140px);
+  transform: rotate(240deg) translateY(-140px);
 }
 
 #player2 {
-  transform: rotate(240deg) translateY(-140px);
+  transform: rotate(180deg) translateY(-140px);
 }
 
 #player3 {
